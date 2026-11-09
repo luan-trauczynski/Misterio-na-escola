@@ -1,20 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Você decide o futuro da IA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistério na escola</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="caixa-principal">
-        <h1>Você decide o futuro da escola</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
+  <main class="app">
+
+    <header class="topbar">
+      <div class="brand">🏫 COLÉGIO<span>ESTADUAL</span></div>
+    </header>
+
+    <!-- CAPA -->
+    <section id="start-screen" class="screen start-screen">
+      <div class="hero-art">
+        <div class="emoji-face face-blue">📖</div>
+        <div class="emoji-face face-yellow">🧪</div>
+        <div class="emoji-face face-pink">🏫</div>
+      </div>
+
+      <p class="eyebrow">UMA AVENTURA PELO AMBIENTE ESCOLAR</p>
+
+      <h1>MISSÃO <span>ESCOLAR</span></h1>
+
+      <p class="intro">
+        A sua sanidade mental corre perigo!
+        Responda às perguntas, escolha seus caminhos
+        e sobreviva a um dia pesado na escola.
+      </p>
+
+
+      <button class="primary-btn" id="start-btn">
+        INICIAR DIA ESCOLAR ➜
+      </button>
+    </section>
+
+    <!-- JOGO -->
+    <section id="game-screen" class="screen game-screen hidden">
+
+      <div class="game-heading">
+        <div>
+          <p class="eyebrow">AULA DE QUÍMICA</p>
+          <h2 id="chapter-title"></h2>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <div class="level-chip" id="level-chip">FASE 01</div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div class="hud">
+        <span>🧠 Saúde mental</span>
+        <strong id="integrity">100%</strong>
+      </div>
+
+      <div class="integrity-track">
+        <div id="integrity-bar"></div>
+      </div>
+
+      <article class="question-card">
+
+        <div class="question-icon" id="question-icon">🤔</div>
+
+        <h3 id="question"></h3>
+
+        <p id="context" class="context"></p>
+
+        <div id="answers" class="answers"></div>
+      </article>
+
+      <div class="game-footer">
+        <span></span>
+        <button id="back-btn" class="text-btn">↶ Voltar</button>
+      </div>
+    </section>
+
+    <!-- VITÓRIA -->
+    <section id="win-screen" class="screen result-screen hidden">
+      <div class="result-icon">🏠</div>
+
+      <p class="eyebrow">MISSÃO CONCLUÍDA</p>
+
+      <h2>VOCÊ ESTÁ<br><span>EM CASA</span></h2>
+
+      <p>
+        Talvez amigos tenham ficado para trás, talvez você ainda não saiba o que aconteceu no colégio, ou talvez, você saiba exatamente as respostas de todo o mistério. Fato é que agora está seguro no conforto de sua casa. Pronto para mais um dia de aula?
+      </p>
+
+      <div class="score-pill">
+        🧠 SAÚDE MENTAL PROTEGIDA · 100%
+      </div>
+
+      <button class="primary-btn" id="restart-win">
+        UM NOVO DIA ↻
+      </button>
+    </section>
+
+    <!-- GAME OVER -->
+    <section id="gameover-screen"
+      class="screen result-screen gameover hidden">
+
+      <div class="glitch-icon">💀</div>
+
+      <p class="eyebrow">NÃO SOBRA NADA</p>
+
+      <h2>VOCÊ FOI<br><span>EXPULSO</span></h2>
+
+      <div class="gameover-stamp">BRUTAL</div>
+
+      <p>
+        Talvez as sua últimas decisões não tenham sido as melhores. Tente novamente.
+      </p>
+
+      <button class="primary-btn danger-btn" id="restart-loss">
+        RECOMEÇAR ↻
+      </button>
+    </section>
+
+    <footer class="site-footer">
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
